@@ -446,7 +446,7 @@ libKScreenLocker.so.6 kscreenlocker-6.0.0_1
 libparted.so.2 libparted-3.1_1
 libparted-fs-resize.so.0 libparted-3.1_1
 libntfs-3g.so.89 ntfs-3g-2021.8.22_1
-libruby.so.3.2 ruby-3.2.0_1
+libruby.so.3.3 ruby-3.3.2_1
 librw.so.0 rankwidth-0.9_1
 libKSysGuardFormatter.so.2 libksysguard-6.0.0_1
 libKSysGuardSensorFaces.so.2 libksysguard-6.0.0_1
@@ -1136,6 +1136,7 @@ libgstsignalprocessor-1.0.so.0 gst-plugins-bad1-1.18.3_2
 libgstbasevideo-1.0.so.0 gst-plugins-bad1-1.18.3_2
 libgstbasecamerabinsrc-1.0.so.0 gst-plugins-bad1-1.18.3_2
 libgstcodecparsers-1.0.so.0 gst-plugins-bad1-1.18.3_2
+libgstplay-1.0.so.0 gst-plugins-bad1-1.24.4_1
 libgstplayer-1.0.so.0 gst-plugins-bad1-1.18.3_2
 libgstwebrtc-1.0.so.0 gst-plugins-bad1-1.18.4_2
 libgsttranscoder-1.0.so.0 gst-plugins-bad1-1.18.4_2
@@ -1732,7 +1733,7 @@ libtelepathy-farstream.so.3 telepathy-farstream-0.6.0_6
 libnetpbm.so.11 libnetpbm-10.66.03_2
 libid3.so id3lib-3.8.3_7
 libid3-3.8.so.3 id3lib-3.8.3_7
-libgirara-gtk3.so.3 girara-0.2.8_1
+libgirara-gtk3.so.4 girara-0.4.4_1
 libjq.so.1 jq-1.6_2
 libcrypto.so.3 libcrypto3-3.1.2_1
 libssl.so.3 libssl3-3.1.2_1
@@ -2265,7 +2266,6 @@ libuecc.so.0 libuecc-5_1
 libKF5WindowSystem.so.5 kwindowsystem-5.6.0_1
 libKF5GuiAddons.so.5 kguiaddons-5.6.0_1
 libLayerShellQtInterface.so.6 layer-shell-qt-6.0.0_1
-libLayerShellQtInterface.so.5 layer-shell-qt-5.21.90_1
 liblxqt.so.2 liblxqt-2.0.0_1
 liblxqt-globalkeys.so.2 lxqt-globalkeys-2.0.0_1
 liblxqt-globalkeys-ui.so.2 lxqt-globalkeys-2.0.0_1
