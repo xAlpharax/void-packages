@@ -1,6 +1,6 @@
 # Template file for 'limine'
 pkgname=limine
-version=7.7.2
+version=7.11.0
 revision=1
 build_style=gnu-configure
 configure_args="--enable-all TOOLCHAIN_FOR_TARGET=llvm"
@@ -9,8 +9,9 @@ short_desc="Advanced, portable, multiprotocol bootloader"
 maintainer="Mintsuki <mintsuki@protonmail.com>"
 license="BSD-2-Clause"
 homepage="https://limine-bootloader.org/"
+changelog="https://raw.githubusercontent.com/limine-bootloader/limine/trunk/ChangeLog"
 distfiles="https://github.com/limine-bootloader/limine/releases/download/v${version}/limine-${version}.tar.gz"
-checksum=b77ca6b0a9fea455b6c4e9fe04a26b8aac7670c6c28ed9c61a0bc217cdbff131
+checksum=e79085c81e9541f78a5912c5265db59d8287973de4c9d007be68f10799a6baf5
 
 post_install() {
 	vlicense COPYING

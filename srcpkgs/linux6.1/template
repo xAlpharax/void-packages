@@ -1,6 +1,6 @@
 # Template file for 'linux6.1'
 pkgname=linux6.1
-version=6.1.94
+version=6.1.100
 revision=1
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
@@ -14,7 +14,7 @@ if [ "${version##*.}" != 0 ]; then
 fi
 
 checksum="2ca1f17051a430f6fed1196e4952717507171acfd97d96577212502703b25deb
- 6527c26f518cf72357eb851e3844aa80ded8200b4cc1865be170cf7bae2ba99d"
+ 6b901fd4fb2d20d305f982bc6feb5f1f92c6161752c15bb808c4ef080b173a95"
 python_version=3
 
 # XXX Restrict archs until a proper <arch>-dotconfig is available in FILESDIR.
