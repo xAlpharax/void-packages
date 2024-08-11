@@ -1,6 +1,6 @@
 # Template file for 'yt-dlp'
 pkgname=yt-dlp
-version=2024.07.25
+version=2024.08.06
 revision=1
 build_style=python3-pep517
 make_check_args="-k not((download)or(test_socks))"
@@ -13,4 +13,4 @@ license="Unlicense"
 homepage="https://github.com/yt-dlp/yt-dlp"
 changelog="https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/Changelog.md"
 distfiles="https://github.com/yt-dlp/yt-dlp/releases/download/${version}/yt-dlp.tar.gz>yt-dlp-$version.tar.gz"
-checksum=f34f396cd100f9a68ad6ffbb0d09932011e8f6896d01a177f3c6610b39b53488
+checksum=e08331fb9a36eba56b4efd074b5b25fbf08413e9cb47009a28ecbffe47150310
