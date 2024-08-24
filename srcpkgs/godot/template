@@ -1,7 +1,7 @@
 # Template file for 'godot'
 pkgname=godot
-version=4.2.2
-revision=1
+version=4.3
+revision=2
 archs="x86_64* i686* aarch64* armv7* ppc64*"
 build_style=scons
 # Build currently fails with embree-4.X
@@ -25,7 +25,7 @@ maintainer="dataCobra <datacobra@thinkbot.de>"
 license="MIT"
 homepage="https://www.godotengine.org/"
 distfiles="https://github.com/godotengine/godot/archive/${version}-stable.tar.gz"
-checksum=990b7b716656122364b1672508c516c898497c50216d7c00c60eeaf507685c0e
+checksum=6a441d02957432d76343052296dc514b1b6bd72af920c9f2518b1ec3cb534874
 nocross=https://build.voidlinux.org/builders/armv7l_builder/builds/6342/steps/shell_3/logs/stdio
 
 CFLAGS+=" -fPIE -fPIC"
@@ -57,8 +57,9 @@ post_patch() {
 
 do_install() {
 	vlicense LICENSE.txt
-	vinstall ${FILESDIR}/godot.desktop 644 /usr/share/applications/
-	vinstall ${wrksrc}/icon.png 644 /usr/share/pixmaps/ godot.png
+
+	vinstall misc/dist/linux/org.godotengine.Godot.desktop 644 /usr/share/applications/
+	vinstall icon.png 644 /usr/share/pixmaps/ godot.png
 
 	case "$XBPS_TARGET_MACHINE" in
 		x86_64*) vbin bin/godot.linuxbsd.editor.x86_64 godot;;
