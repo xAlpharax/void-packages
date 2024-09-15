@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm64 6.10.9 Kernel Configuration
+# Linux/arm64 6.10.10 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="aarch64-linux-musl-gcc (GCC) 13.2.0"
 CONFIG_CC_IS_GCC=y
@@ -3279,7 +3279,7 @@ CONFIG_TAP=m
 CONFIG_VETH=m
 CONFIG_VIRTIO_NET=m
 CONFIG_NLMON=m
-# CONFIG_NETKIT is not set
+CONFIG_NETKIT=y
 CONFIG_NET_VRF=m
 CONFIG_VSOCKMON=m
 CONFIG_MHI_NET=m
