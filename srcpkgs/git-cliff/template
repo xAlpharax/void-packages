@@ -1,6 +1,6 @@
 # Template file for 'git-cliff'
 pkgname=git-cliff
-version=2.5.0
+version=2.6.1
 revision=1
 archs="x86_64* i686* aarch64* arm*" # ring
 build_style=cargo
@@ -12,11 +12,11 @@ hostmakedepends="pkg-config"
 makedepends="libgit2-1.8-devel libzstd-devel"
 short_desc="Changelog generator based on conventional commits"
 maintainer="tranzystorekk <tranzystorek.io@protonmail.com>"
-license="Apache-2.0, MIT"
+license="Apache-2.0 OR MIT"
 homepage="https://github.com/orhun/git-cliff"
 changelog="https://raw.githubusercontent.com/orhun/git-cliff/main/CHANGELOG.md"
 distfiles="https://github.com/orhun/git-cliff/archive/refs/tags/v${version}.tar.gz"
-checksum=87b424657f5843fc08b544e5beb1f97c6b86ef6e90465b570ed41a343e90f135
+checksum=96d2759bb276bfddf4f6653a06afe2982d0bdc9678a5d2cb3880685a681a8a3e
 
 post_install() {
 	vdoc README.md

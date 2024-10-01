@@ -3,7 +3,7 @@
 _desc="NVIDIA drivers for linux"
 
 pkgname=nvidia
-version=550.107.02
+version=550.120
 revision=2
 maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="custom:NVIDIA Proprietary"
@@ -19,7 +19,7 @@ conflicts="xserver-abi-video>25_1 nvidia470>=0 nvidia390>=0"
 
 _pkg="NVIDIA-Linux-x86_64-${version}"
 distfiles="http://uk.download.nvidia.com/XFree86/Linux-x86_64/${version}/${_pkg}.run"
-checksum=f97c1ca4df306028d88c7aed631fa8061b55c57c4c234d853b575d8cce6c0168
+checksum=801928274753ccce7627098ea078cc37070ddae04de3aa084591c05fc7035697
 # subpackages need to be processed in this specific order
 subpackages="nvidia-gtklibs nvidia-dkms nvidia-firmware nvidia-opencl nvidia-libs nvidia-libs-32bit"
 depends="nvidia-libs-${version}_${revision}
@@ -210,6 +210,8 @@ do_install() {
 	mkdir -p usr/share/dbus-1/system.d
 	vinstall nvidia-dbus.conf 644 usr/share/dbus-1/system.d
 	vbin systemd/nvidia-sleep.sh
+	mkdir -p usr/libexec/elogind/system-sleep
+	vinstall ${FILESDIR}/nvidia-sleep.sh 0755 usr/libexec/elogind/system-sleep nvidia.sh
 
 	# opencl pkg
 	vinstall nvidia.icd 644 etc/OpenCL/vendors
