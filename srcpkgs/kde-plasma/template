@@ -1,6 +1,6 @@
-# Template file for 'kde5'
-pkgname=kde5
-version=6.1.1
+# Template file for 'kde-plasma'.
+pkgname=kde-plasma
+version=6.2.0
 revision=1
 build_style=meta
 depends="bluedevil>=${version}
@@ -32,3 +32,9 @@ short_desc="KDE Plasma Desktop meta-package for Void Linux"
 maintainer="John <me@johnnynator.dev>"
 license="Public Domain"
 homepage="https://kde.org/plasma-desktop"
+
+kde5_package() {
+	build_style=meta
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" (transitional dummy package)"
+}
