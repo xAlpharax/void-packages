@@ -1,6 +1,6 @@
 # Template file for 'removed-packages'
 pkgname=removed-packages
-version=0.1.20240929
+version=0.1.20241028
 revision=1
 build_style=meta
 short_desc="Uninstalls packages removed from repository"
@@ -208,6 +208,7 @@ replaces="
  gx<=0.14.3_1
  hangups<=0.4.18_2
  hardinfo<=0.5.1_14
+ hikari<=2.3.3_3
  httperf<=0.9.0_9
  icecat-i18n-ach<=78.6.1_1
  icecat-i18n-af<=78.6.1_1
@@ -813,6 +814,10 @@ replaces="
  wireshark-gtk<=3.0.7_1
  wlroots0.14-devel<=0.14.1_1
  wlroots0.14<=0.14.1_1
+ wlroots0.15-devel<=0.15.1_3
+ wlroots0.15<=0.15.1_3
+ wlroots0.16-devel<=0.16.2_3
+ wlroots0.16<=0.16.2_3
  wmii<=3.9.2_8
  xcdroast<=1.19_1
  xdebug8.0<=3.2.1_1

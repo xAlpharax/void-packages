@@ -679,7 +679,7 @@ libexempi.so.8 exempi-2.5.0_1
 libatasmart.so.4 libatasmart-0.17_1
 libsgutils2-1.45.so.2 libsgutils-1.45_1
 libcpufreq.so.0 libcpufreq-007_1
-libcpuid.so.16 libcpuid-0.6.2_1
+libcpuid.so.17 libcpuid-0.7.0_1
 libgucharmap_2_90.so.7 gucharmap-3.0.0_1
 libgphoto2.so.6 libgphoto2-2.5.7_1
 libgphoto2_port.so.12 libgphoto2-2.5.7_1
@@ -3621,8 +3621,6 @@ libswitchboard-2.0.so.0 switchboard-2.3.2_1
 libcodecore.so.0 libio.elementary.code-3.0_1
 libpantheon-files-core.so.6 libio.elementary.files-6.0.0_1
 libpantheon-files-widgets.so.6 libio.elementary.files-6.0.0_1
-libwlroots.so.10 wlroots0.15-0.15.1_1
-libwlroots.so.11 wlroots0.16-0.16.0_1
 libwlroots.so.12 wlroots0.17-0.17.0_1
 libwlroots-0.18.so wlroots0.18-0.18.0_1
 libbaseencode.so.1 libbaseencode-1.0.9_1
@@ -4328,7 +4326,7 @@ librz_type.so.0.7 rizin-0.7.2_1
 librz_util.so.0.7 rizin-0.7.2_1
 libaravis-0.8.so.0 libaravis-0.8.21_1
 libLimeSuite.so.23.11-1 LimeSuite-23.11.0_1
-libnvme.so.1 libnvme-1.0_1
+libnvme.so.1 libnvme-1.10_1
 libnvme-mi.so.1 libnvme-1.2_1
 libRInside.so R-cran-RInside-0.2.16_1
 libXrdUtils.so.3 xrootd-5.4.0_1
