@@ -1000,6 +1000,7 @@ libLLVM-17.so libllvm17-17.0.6_1
 libLLVM.so.18.1 libllvm18-18.1.8_1
 libLLVM.so.19.1 libllvm19-19.1.0_1
 libLLVMSPIRVLib.so.18.1 SPIRV-LLVM-Translator-18.1.2_1
+libLLVMSPIRVLib.so.19.1 SPIRV-LLVM-Translator19-19.1.1_1
 libomp.so.5 libomp-17.0.6_1
 libomptarget.so.18.1 libomp-18.1.8_1
 libisofs.so.6 libisofs-0.6.24_1
@@ -2065,7 +2066,7 @@ libpolkit-qt6-core-1.so.1 polkit-qt6-0.200.0_1
 libpolkit-qt6-gui-1.so.1 polkit-qt6-0.200.0_1
 libpolkit-qt6-agent-1.so.1 polkit-qt6-0.200.0_1
 libfm-qt.so.14 libfm-qt5-1.4.0_1
-libfm-qt6.so.14 libfm-qt-2.0.2_1
+libfm-qt6.so.15 libfm-qt-2.1.0_1
 libqtermwidget5.so.1 qtermwidget-1.0.0_1
 libqtermwidget6.so.2 qtermwidget-qt6-2.0.0_1
 libmd4c.so.0 libmd4c-0.4.8_1
@@ -2792,7 +2793,7 @@ libsmpeg2-2.0.so.0 smpeg2-2.0.0_1
 libedac.so.1 libedac-0.18_1
 libxlsreader.so.8 libxls-1.6.1_1
 libR.so R-4.0.2_1
-libmarkdown.so.2 discount-2.2.0_3
+libmarkdown.so.3 discount-3.0.0d_1
 libkeystone.so.0 keystone-0.9_1
 libmate-slab.so.0 libmate-control-center-1.14.0_2
 libuev.so.3 libuev-2.4.0_1
@@ -4541,3 +4542,6 @@ libsfdo-desktop-file.so.0 libsfdo-0.1.3_1
 libsfdo-icon.so.0 libsfdo-0.1.3_1
 libKMahjongg6.so.6 libkmahjongg-24.08.2_1
 libflashrom.so.1 flashrom-1.4.0_1
+libpyside6.so.6.7 libpyside6-6.7.2_1
+libpyside6qml.so.6.7 libpyside6-6.7.2_1
+libshiboken6.so.6.7 libshiboken6-6.7.2_1
