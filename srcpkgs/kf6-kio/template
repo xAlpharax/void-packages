@@ -1,6 +1,6 @@
 # Template file for 'kf6-kio'
 pkgname=kf6-kio
-version=6.8.0
+version=6.10.0
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -20,7 +20,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kio"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=cb8ac25a5324e8b617817feefcdf7739eb20dc35dcf4444b886c1dcbb99a56be
+checksum=7eb454438f149e7ed513c3bbd526b67e3e3ecfe32ae7c986168baa59600b699c
 
 do_check() {
 	cd build
