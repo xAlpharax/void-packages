@@ -1,0 +1,30 @@
+# Template file for 'tinymist'
+pkgname=tinymist
+version=0.13.2
+revision=1
+build_style=cargo
+build_helper="qemu"
+configure_args="--features=cli --bin tinymist --bin typlite"
+depends="typst"
+short_desc="Integrated language service for Typst"
+maintainer="classabbyamp <void@placeviolette.net>"
+license="Apache-2.0"
+homepage="https://myriad-dreamin.github.io/tinymist/"
+distfiles="https://github.com/Myriad-Dreamin/tinymist/archive/refs/tags/v${version}.tar.gz"
+checksum=c97ac0d2f303e3e2b2224d34f75f26b67d623fe40f538929fa5108c1ef1486b8
+# takes forever
+make_check=no
+
+if [ "$XBPS_TARGET_WORDSIZE" -eq 32 ]; then
+	broken="atomic64"
+fi
+
+do_install() {
+	vbin target/${RUST_TARGET}/release/tinymist
+	vbin target/${RUST_TARGET}/release/typlite
+
+	for sh in bash fish zsh; do
+		vtargetrun "${DESTDIR}"/usr/bin/tinymist completion "$sh" > "comp.$sh"
+		vcompletion "comp.$sh" "$sh"
+	done
+}

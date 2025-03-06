@@ -1,6 +1,6 @@
 # Template file for 'github-cli'
 pkgname=github-cli
-version=2.65.0
+version=2.68.0
 revision=1
 build_style=go
 build_helper=qemu
@@ -14,11 +14,7 @@ license="MIT"
 homepage="https://cli.github.com"
 changelog="https://github.com/cli/cli/releases"
 distfiles="https://github.com/cli/cli/archive/refs/tags/v${version}.tar.gz"
-checksum=af026f1b0368b1444a67a941f179ddce7e97333881ec0bbcb49fed29f4151241
-
-if [ "${XBPS_BUILD_ENVIRONMENT}" = void-packages-ci ]; then
-	make_check_args+=" -skip TestMigrationWriteErrors"
-fi
+checksum=9c211ff501fd42e1a842b9709cd994a59d39b6d34014d354f00049240b8d8838
 
 pre_build() {
 	local _date
