@@ -1,7 +1,8 @@
 # Template file for 'openresolv'
 pkgname=openresolv
+reverts="3.14.0_1"
 version=3.13.2
-revision=1
+revision=2
 build_style=gnu-configure
 configure_args="--bindir=/usr/bin"
 hostmakedepends="runit"
