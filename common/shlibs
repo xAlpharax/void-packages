@@ -16,7 +16,9 @@
 # PLEASE NOTE: when multiple packages provide the same SONAME, the first
 # one (order top->bottom) is preferred over the next ones.
 #
-libc.so musl-1.1.24_7
+libc.so musl1.1-1.1.24_1 armv6l-musl
+libc.so musl1.1-1.1.24_1 armv7l-musl
+libc.so musl-1.2.5_1
 libc.so.6 glibc-2.41_1
 libm.so.6 glibc-2.41_1
 libpthread.so.0 glibc-2.41_1
@@ -415,9 +417,9 @@ libSDL_image-1.2.so.0 SDL_image-1.2.10_1
 libx264.so.157 x264-20190507.2245_1
 libopenh264.so.7 openh264-2.4.1_1
 libxvidcore.so.4 xvidcore-1.2.2_1
-libtag.so.1 taglib-1.6.1_1
+libtag.so.2 taglib-2.0.2_1
 libtag-extras.so.1 taglib-extras-1.0.1_1
-libtag_c.so.0 taglib-1.6.1_1
+libtag_c.so.2 taglib-2.0.2_1
 libfribidi.so.0 fribidi-0.19.2_1
 liba52.so.0 liba52-0.7.4_1
 libcddb.so.2 libcddb-1.3.2_1
@@ -1232,8 +1234,6 @@ libnfs.so.14 libnfs-5.0.1_1
 libzip.so.5 libzip-1.7.3_2
 libluajit-5.1.so.2 LuaJIT-2.0.0_1
 libOSMesa.so.8 libOSMesa-9.1_1
-libtaginfo.so.1 libtaginfo-0.1.3_1
-libtaginfo_c.so.0 libtaginfo-0.1.3_1
 libaa.so.1 aalib-1.4rc4_2
 libbsd.so.0 libbsd-0.4.2_1
 libwiringPi.so libwiringPi-0.0.20200408_1
@@ -4323,7 +4323,7 @@ librz_type.so.0.7 rizin-0.7.2_1
 librz_util.so.0.7 rizin-0.7.2_1
 libaravis-0.8.so.0 libaravis-0.8.21_1
 libLimeSuite.so.23.11-1 LimeSuite-23.11.0_1
-libnvme.so.1 libnvme-1.10_1
+libnvme.so.1 libnvme-1.13_1
 libnvme-mi.so.1 libnvme-1.2_1
 libRInside.so R-cran-RInside-0.2.16_1
 libXrdUtils.so.3 xrootd-5.4.0_1
@@ -4548,3 +4548,6 @@ libomemo-c.so.0 libomemo-c-0.5.1_1
 libclapper-gtk-0.0.so.0 clapper-libs-0.8.0_1
 libclapper-0.0.so.0 clapper-libs-0.8.0_1
 libopenxr_loader.so.1 openxr-1.1.47_1
+libppsdocument-4.0.so.5 libpapers-48.3_1
+libppsshell-4.0.so.4 libpapers-48.3_1
+libppsview-4.0.so.4 libpapers-48.3_1
