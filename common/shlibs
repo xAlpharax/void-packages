@@ -16,8 +16,8 @@
 # PLEASE NOTE: when multiple packages provide the same SONAME, the first
 # one (order top->bottom) is preferred over the next ones.
 #
-libc.so musl1.1-1.1.24_1 armv6l-musl
-libc.so musl1.1-1.1.24_1 armv7l-musl
+libc.so musl1.1-1.1.24_8 armv6l-musl
+libc.so musl1.1-1.1.24_8 armv7l-musl
 libc.so musl-1.2.5_1
 libc.so.6 glibc-2.41_1
 libm.so.6 glibc-2.41_1
@@ -4551,3 +4551,5 @@ libopenxr_loader.so.1 openxr-1.1.47_1
 libppsdocument-4.0.so.5 libpapers-48.3_1
 libppsshell-4.0.so.4 libpapers-48.3_1
 libppsview-4.0.so.4 libpapers-48.3_1
+libngtcp2.so.16 ngtcp2-1.13.0_1
+libngtcp2_crypto_ossl.so.0 ngtcp2-1.13.0_1
