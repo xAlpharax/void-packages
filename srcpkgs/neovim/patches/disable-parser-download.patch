@@ -3,7 +3,7 @@ index 837d075..6c3fccb 100644
 --- a/cmake.deps/cmake/BuildTreesitterParsers.cmake
 +++ b/cmake.deps/cmake/BuildTreesitterParsers.cmake
 @@ -19,13 +19,12 @@ function(BuildTSParser)
- 
+
    get_externalproject_options(${NAME} ${DEPS_IGNORE_SHA})
    ExternalProject_Add(${NAME}
 -    DOWNLOAD_DIR ${DEPS_DOWNLOAD_DIR}/${NAME}
@@ -16,5 +16,5 @@ index 837d075..6c3fccb 100644
 -    ${EXTERNALPROJECT_OPTIONS})
 +      -D PARSERLANG=${TS_LANG})
  endfunction()
- 
+
  foreach(lang c lua vim vimdoc query python bash)
