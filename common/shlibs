@@ -1116,9 +1116,9 @@ libSDL_sound-1.0.so.1 SDL_sound-1.0.3_1
 libgtksourceview-2.0.so.0 gtksourceview2-2.10.5_1
 libxdot.so.4 graphviz-libs-2.28.0_6
 libgvpr.so.2 graphviz-libs-2.28.0_6
-libcgraph.so.6 graphviz-libs-2.28.0_6
-libgvc.so.6 graphviz-libs-2.28.0_6
-libcdt.so.5 graphviz-libs-2.28.0_6
+libcgraph.so.7 graphviz-libs-13.0.0_1
+libgvc.so.7 graphviz-libs-13.0.0_1
+libcdt.so.6 graphviz-libs-13.0.0_1
 libpathplan.so.4 graphviz-libs-2.28.0_6
 liblab_gamut.so.1 graphviz-libs-2.40.1_1
 libmowgli-2.so.0 libmowgli-2.1.3_8
@@ -2256,13 +2256,6 @@ libpgf.so.6 libpgf-6.14.12_1
 libqhull_r.so.8.0 libqhull-2020.2_1
 libqhull.so.8.0 libqhull-2020.2_1
 libKF5NetworkManagerQt.so.6 networkmanager-qt5-5.26.0_1
-libfcitx-core.so.0 libfcitx-4.2.8_1
-libfcitx-gclient.so.1 libfcitx-4.2.9.5_1
-libfcitx-utils.so.0 libfcitx-4.2.8_1
-libfcitx-config.so.4 libfcitx-4.2.8_1
-libFcitxQt5DBusAddons.so.1 libfcitx-qt5-1.2.1_1
-libFcitxQt5WidgetsAddons.so.1 libfcitx-qt5-1.2.1_1
-libfcitx-qt5.so.0 libfcitx-qt5-0.1.3_1
 libFcitx5Utils.so.2 libfcitx5-5.0.5_1
 libFcitx5Core.so.7 libfcitx5-5.0.5_1
 libFcitx5Config.so.6 libfcitx5-5.0.5_1
@@ -4512,7 +4505,7 @@ libgrass_gproj.8.3.so grass-8.3.0_1
 libgrass_imagery.8.3.so grass-8.3.0_1
 libgrass_raster.8.3.so grass-8.3.0_1
 libgrass_vector.8.3.so grass-8.3.0_1
-libvpl.so.2 oneVPL-2023.3.1_1
+libvpl.so.2 libvpl-2.14.0_1
 libusrsctp.so.2 usrsctp-0.9.5.0_1
 libdatachannel.so.0.20 libdatachannel-0.20.2_1
 libgeotiff.so.5 libgeotiff-1.7.1_1
@@ -4537,7 +4530,7 @@ libopenrazer.so.0 libopenrazer-0.2.0_1
 libstaroffice-0.0.so.0 libstaroffice-0.0.7_1
 libbox2d.so.2 box2d-2.4.1_1
 libhwy.so.1 highway-1.2.0_1
-libscenefx-0.2.so scenefx-0.2.1_1
+libscenefx-0.4.so scenefx-0.4.1_1
 libnng.so.1 nng-1.5.2_1
 libsentry.so sentry-native-0.7.7_1
 libjose.so.0 libjose-14_1
