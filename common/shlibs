@@ -2752,12 +2752,10 @@ libKDevPlatformTests.so.62 kdevelop-25.04.2_1
 libKDevPlatformUtil.so.62 kdevelop-25.04.2_1
 libKDevPlatformVcs.so.62 kdevelop-25.04.2_1
 libts.so.0 tslib-1.6_1
-libobs.so.0 obs-0.14.1_2
-libobs.so.30 obs-31.0.2_1
+libobs.so.0 obs-30.2.3_1
 libobsglad.so.1 obs-28.0.1_1
-libobs-opengl.so.30 obs-31.0.2_1
-libobs-frontend-api.so.0 obs-20.1.3_1
-libobs-frontend-api.so.30 obs-31.0.2_1
+libobs-opengl.so.1 obs-30.2.3_1
+libobs-frontend-api.so.0 obs-30.2.3_1
 libzimg.so.2 zimg-2.0.4_1
 libvapoursynth.so vapoursynth-R32_2
 libvapoursynth-script.so.0 vapoursynth-R32_1
@@ -4507,7 +4505,7 @@ libgrass_raster.8.3.so grass-8.3.0_1
 libgrass_vector.8.3.so grass-8.3.0_1
 libvpl.so.2 libvpl-2.14.0_1
 libusrsctp.so.2 usrsctp-0.9.5.0_1
-libdatachannel.so.0.23 libdatachannel-0.23.1_1
+libdatachannel.so.0.20 libdatachannel-0.20.2_1
 libgeotiff.so.5 libgeotiff-1.7.1_1
 libdraco.so.8 draco-1.5.6_1
 libpdalcpp.so.17 libpdal-2.7.0_1
