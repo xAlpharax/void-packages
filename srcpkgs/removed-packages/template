@@ -1,7 +1,7 @@
 # Template file for 'removed-packages'
 pkgname=removed-packages
 version=0.1.20250720
-revision=1
+revision=2
 metapackage=yes
 short_desc="Uninstalls packages removed from repository"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
@@ -457,6 +457,7 @@ replaces="
  libqmatrixclient-devel<=0.5.3.2_1
  libqmatrixclient<=0.5.3.2_1
  libqzeitgeist<=0.8.0_6
+ libre2.10<=2023.03.01_3
  librpcsecgss-devel<=0.19_6
  librpcsecgss<=0.19_6
  libshiboken-python3<=5.15.0_3
@@ -571,6 +572,7 @@ replaces="
  opentmpfiles<=0.3.1_1
  orage<=4.12.1_7
  pam_zfscrypt<=0.2.0_3
+ paper-gtk-theme<=2.1.0_2
  parallel-rust<=0.11.3_2
  paraview<=5.8.1_3
  pcb<=4.3.0_1
