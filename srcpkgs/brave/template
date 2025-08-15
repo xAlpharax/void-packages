@@ -1,6 +1,6 @@
 # Template file for 'brave'
 pkgname=brave
-version=1.80.125
+version=1.81.135
 revision=1
 only_for_archs="x86_64"
 short_desc="Secure, fast and private web browser with adblocker"
@@ -9,7 +9,7 @@ hostmakedepends="tar xz" # need gtk+3!
 license="Mozilla Public License Version 2.0"
 homepage="https://brave.com"
 distfiles="https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser_${version}_amd64.deb"
-checksum=8a1d574898031a3da003093250988ec8aaeebe9a2e728fa25b2384cb3ebb3369
+checksum=33df4b1743dcef8c6c4269c7f7b013094c6b03215f890d11c3c29822f909a0f7
 ostrip=yes
 
 do_extract() {
