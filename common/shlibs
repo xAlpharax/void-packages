@@ -1846,7 +1846,7 @@ librevenge-generators-0.0.so.0 librevenge-0.0.1_1
 librevenge-stream-0.0.so.0 librevenge-0.0.1_1
 libepubgen-0.1.so.1 libepubgen-0.1.0_1
 libqxp-0.0.so.0 libqxp-0.0.1_1
-libetonyek-0.1.so.1 libetonyek-0.1.1_1
+libetonyek-0.1.so.1 libetonyek-0.1.12_1
 libodfgen-0.1.so.1 libodfgen-0.1.1_1
 libKF5SonnetUi.so.5 sonnet-5.26.0_1
 libKF5SonnetCore.so.5 sonnet-5.26.0_1
@@ -2699,11 +2699,11 @@ libCgl.so.1 CoinMP-1.8.3_1
 libCbc.so.3 CoinMP-1.8.3_1
 libCbcSolver.so.3 CoinMP-1.8.3_1
 libmwaw-0.3.so.3 libmwaw-0.3.7_1
-libixion-0.18.so.0 libixion-0.18.1_1
-liborcus-parser-0.18.so.0 liborcus-0.18.1_1
-liborcus-mso-0.18.so.0 liborcus-0.18.1_1
-liborcus-0.18.so.0 liborcus-0.18.1_1
-liborcus-spreadsheet-model-0.18.so.0 liborcus-0.18.1_1
+libixion-0.20.so.0 libixion-0.20.0_1
+liborcus-parser-0.20.so.0 liborcus-0.20.1_1
+liborcus-mso-0.20.so.0 liborcus-0.20.1_1
+liborcus-0.20.so.0 liborcus-0.20.1_1
+liborcus-spreadsheet-model-0.20.so.0 liborcus-0.20.1_1
 libnumbertext-1.0.so.0 libnumbertext-1.0.4_1
 libzmf-0.0.so.0 libzmf-0.0.2_1
 libzxcvbn.so.0 zxcvbn-c-2.5_1
@@ -4549,3 +4549,4 @@ libdatovka.so.8 libdatovka-0.7.0_1
 libhyprutils.so.6 hyprutils-0.7.1_1
 libblake3.so.0 libblake3-1.8.2_1
 libsexp.so.1 sfsexp-1.4.1
+libeot.so.0 libeot-0.01_1
