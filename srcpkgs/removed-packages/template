@@ -1,6 +1,6 @@
 # Template file for 'removed-packages'
 pkgname=removed-packages
-version=0.1.20251009
+version=0.1.20251014
 revision=1
 metapackage=yes
 short_desc="Uninstalls packages removed from repository"
@@ -479,12 +479,14 @@ replaces="
  libpoppler87<=0.76.0_1
  libpoppler89<=0.80.0_1
  libproxy-python<=0.4.18_1
+ libproxy-python3<=0.4.18_4
  libpurple-hangouts<=20190606_1
  libpyside-python3<=5.15.0_2
  libpyside2-python3-devel<=5.15.10_1
  libpyside2-python3<=5.15.10_1
  libqmatrixclient-devel<=0.5.3.2_1
  libqmatrixclient<=0.5.3.2_1
+ libqmobipocket<=23.08.5_1
  libqzeitgeist<=0.8.0_6
  libre2.10<=2023.03.01_3
  librpcsecgss-devel<=0.19_6
