@@ -1951,7 +1951,7 @@ libQt5TextToSpeech.so.5 qt5-speech-5.15.2_3
 libQt5Bodymovin.so.5 qt5-lottie-5.15.2_3
 libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
-libx265.so.212 x265-4.0_1
+libx265.so.215 x265-4.1_1
 libQt5Xdg.so.3 libqt5xdg-3.2.0_1
 libQt5XdgIconLoader.so.3 libqt5xdg-3.2.0_1
 libQt6Xdg.so.4 libqtxdg-4.0.0_1
@@ -2342,10 +2342,6 @@ libsfml-system.so.2.6 SFML-2.6.1_1
 libsfml-window.so.2.6 SFML-2.6.1_1
 libsfml-audio.so.2.6 SFML-2.6.1_1
 libsfml-graphics.so.2.6 SFML-2.6.1_1
-libclamav.so.9 clamav-0.103.1_2
-libclamunrar.so.9 clamav-0.103.1_2
-libclamunrar_iface.so.9 clamav-0.103.1_2
-libfreshclam.so.2 clamav-0.103.1_2
 libqca-qt5.so.2 qca-qt5-2.1.3_1
 libqca-qt6.so.2 qca-qt6-2.3.8_1
 libqt5keychain.so.1 qtkeychain-qt5-0.7.0_1
@@ -2889,17 +2885,11 @@ libqmmp.so.1 qmmp-1.1.4_1
 libqmmpui.so.1 qmmp-1.1.4_1
 libalkimia6.so.8 libalkimia-8.2.1_2
 libpayeeidentifier_iban_bic_widgets.so.5 kmymoney-5.0.0_1
-libkmm_plugin.so.5 kmymoney-5.0.0_1
-libkmm_widgets.so.5 kmymoney-5.0.0_1
-libkmm_mymoney.so.5 kmymoney-5.0.0_1
-libpayeeidentifier_nationalAccount.so.5 kmymoney-5.0.0_1
-libpayeeidentifier_iban_bic.so.5 kmymoney-5.0.0_1
-libkmm_payeeidentifier.so.5 kmymoney-5.0.0_1
 libKDb3.so.4 kdb-3.1.0_1
 libKPropertyWidgets3.so.4 kproperty-3.1.0_1
 libKPropertyCore3.so.4 kproperty-3.1.0_1
 libKReport3.so.4 kreport-3.1.0_1
-libbotan-2.so.19 botan-2.19.1_1
+libbotan-3.so.9 botan-3.9.0_1
 libswipl.so.9 swi-prolog-9.0.0_1
 libpcre2-16.so.0 libpcre2-10.22_1
 libpcre2-32.so.0 libpcre2-10.22_1
@@ -3145,7 +3135,7 @@ librpmio.so.9 librpmio-4.15.0_1
 libsquirrel.so.0 squirrel-libs-3.1_1
 libsqstdlib.so.0 squirrel-libs-3.1_1
 libexecinfo.so.1 libexecinfo-1.1_1
-libkpmcore.so.12 kpmcore-22.04.1_1
+libkpmcore.so.13 kpmcore-25.08.1_1
 libpkcs11-helper.so.1 pkcs11-helper-1.25.1_6
 libr_core.so.5.9.8 radare2-5.9.8_1
 libr_config.so.5.9.8 radare2-5.9.8_1
@@ -3174,7 +3164,6 @@ libr_main.so.5.9.8 radare2-5.9.8_1
 libykpiv.so.2 libykpiv-2.3.0_1
 libykcs11.so.2 libykcs11-2.3.0_1
 libKExiv2Qt6.so.0 libkexiv2-24.02.0_1
-libqmobipocket.so.2 libqmobipocket-17.04.3_1
 libQMobipocket6.so.3 libqmobipocket6-25.08.0_1
 libgloox.so.18 gloox-1.0.24_1
 libgsmsd.so.8 gammu-smsd-1.39.0_1
@@ -3206,8 +3195,6 @@ libKPim6AkonadiPrivate.so.6 kf6-akonadi-24.02.0_1
 libKPim6AkonadiWidgets.so.6 kf6-akonadi-24.02.0_1
 libKPim6AkonadiCore.so.6 kf6-akonadi-24.02.0_1
 libKPim6AkonadiAgentWidgetBase.so.6 kf6-akonadi-25.08.0_1
-libKPim5IdentityManagement.so.5 kidentitymanagement-23.04.0_1
-libKPim5IdentityManagementWidgets.so.5 kidentitymanagement-23.04.0_1
 libKChart.so.2 kdiagram-2.8.0_1
 libKGantt.so.2 kdiagram-2.8.0_1
 libKPim6IdentityManagementCore.so.6 kidentitymanagement-24.02.0_1
@@ -3963,7 +3950,7 @@ libcglm.so.0 cglm-0.7.6_1
 libfcft.so.4 fcft-3.0.1_1
 libaml.so.0 aml-0.1.0_1
 libneatvnc.so.0 neatvnc-0.3.2_1
-libtdjson.so.1.8.53 libtd-1.8.53_1
+libtdjson.so.1.8.55 libtd-1.8.55_1
 libJudy.so.1 judy-1.0.5_1
 libsignal-protocol-c.so.2 libsignal-protocol-c-2.3.3_2
 libKSeExprUI.so.4 seexpr-krita-4.0.4.0_1
