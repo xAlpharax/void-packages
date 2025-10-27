@@ -1,0 +1,62 @@
+# Template file for 'opentabletdriver'
+pkgname=opentabletdriver
+version=0.6.6.2
+revision=1
+archs="x86_64"
+hostmakedepends="tar"
+depends="libX11 libXrandr libevdev gtk+3"
+# Do not strip the .NET single-file executables, as it corrupts them.
+nostrip_files="OpenTabletDriver.Console OpenTabletDriver.Daemon OpenTabletDriver.UX.Gtk"
+short_desc="Open source, cross-platform, user-mode tablet driver"
+maintainer="xAlpharax <42233094+xAlpharax@users.noreply.github.com>"
+license="LGPL-3.0-only"
+homepage="https://opentabletdriver.net/"
+distfiles="https://github.com/OpenTabletDriver/OpenTabletDriver/releases/download/v${version}/opentabletdriver-${version}-x64.tar.gz"
+checksum=a944bc8d92f5900b130a0f1d9d6d3b6d9200b8f6255e42039f39959433f4e34e
+
+# Extract the contents of the archive, but strip the top-level 'opentabletdriver' directory.
+do_extract() {
+	tar xvf "${XBPS_SRCDISTDIR}/${pkgname}-${version}/opentabletdriver-${version}-x64.tar.gz" --strip-components=1
+}
+
+do_install() {
+	# Patch the launcher scripts to use /usr/lib instead of the hardcoded /usr/local/lib
+	vsed -i usr/local/bin/otd \
+		-i usr/local/bin/otd-daemon \
+		-i usr/local/bin/otd-gui \
+		-e 's|/usr/local/lib/opentabletdriver|/usr/lib/opentabletdriver|g'
+
+	# udev rules
+	vinstall etc/udev/rules.d/70-opentabletdriver.rules 0644 /usr/lib/udev/rules.d
+
+	# Binaries (now patched)
+	vbin usr/local/bin/otd
+	vbin usr/local/bin/otd-daemon
+	vbin usr/local/bin/otd-gui
+
+	# Kernel module configuration
+	vinstall usr/local/lib/modprobe.d/99-opentabletdriver.conf 0644 /usr/lib/modprobe.d
+	vinstall usr/local/lib/modules-load.d/opentabletdriver.conf 0644 /usr/lib/modules-load.d
+
+	# Main application files
+	vcopy usr/local/lib/opentabletdriver usr/lib
+
+	# Systemd user service
+	vinstall usr/local/lib/systemd/user/opentabletdriver.service 0644 /usr/lib/systemd/user
+
+	# Desktop entry
+	vinstall usr/local/share/applications/opentabletdriver.desktop 0644 /usr/share/applications
+
+	# License
+	vlicense usr/local/share/doc/opentabletdriver/LICENSE
+
+	# Libinput quirks
+	vinstall usr/local/share/libinput/30-vendor-opentabletdriver.quirks 0644 /usr/share/libinput
+
+	# Man page
+	vman usr/local/share/man/man8/opentabletdriver.8.gz
+
+	# Pixmaps
+	vinstall usr/local/share/pixmaps/otd.ico 0644 /usr/share/pixmaps
+	vinstall usr/local/share/pixmaps/otd.png 0644 /usr/share/pixmaps
+}
