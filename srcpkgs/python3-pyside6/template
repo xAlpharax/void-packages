@@ -2,19 +2,23 @@
 # NOTE: keep in sync with Qt6
 pkgname=python3-pyside6
 version=6.10.0
-revision=1
+revision=2
 build_style=cmake
+_llvm=19
 configure_args="-DBUILD_TESTS=OFF -DFORCE_LIMITED_API=no -DNO_QT_TOOLS=yes
  -DNUMPY_INCLUDE_DIR=/${py3_sitelib}/numpy/_core/include
- -DPYTHON_EXECUTABLE=/usr/bin/python3 -Wno-dev"
+ -DPYTHON_EXECUTABLE=/usr/bin/python3 -Wno-dev
+ -DClang_DIR=${XBPS_CROSS_BASE}/usr/lib/llvm/${_llvm}/lib/cmake/clang"
 hostmakedepends="python3-numpy python3-setuptools qt6-base"
-makedepends="libedit-devel libxslt-devel llvm17-devel python3-devel qt6-3d-devel
+makedepends="libedit-devel libxslt-devel llvm${_llvm}-devel clang${_llvm}-devel
+ python3-devel qt6-3d-devel libxml2-devel
  qt6-base-private-devel qt6-charts-devel qt6-connectivity-devel
  qt6-declarative-private-devel qt6-location-devel qt6-multimedia-devel
  qt6-networkauth-devel qt6-position-devel qt6-quick3d-devel qt6-datavis3d-devel
  qt6-remoteobjects-devel qt6-scxml-devel qt6-sensors-devel qt6-serialport-devel
  qt6-shadertools-devel qt6-speech-devel qt6-speech-plugin-flite
  qt6-speech-plugin-mock qt6-speech-plugin-speechd qt6-svg-devel qt6-tools-devel
+ qt6-graphs-devel qt6-serialbus-devel qt6-httpserver-devel
  qt6-webchannel-devel qt6-websockets-devel $(vopt_if pdf qt6-pdf-devel)
  $(vopt_if webengine 'qt6-webengine-devel qt6-webview-devel')"
 depends="python3-shiboken6"
@@ -39,8 +43,10 @@ subpackages="
  python3-pyside6-quick-test
  python3-pyside6-declarative
  python3-pyside6-designer
+ python3-pyside6-graphs
  python3-pyside6-gui
  python3-pyside6-help
+ python3-pyside6-httpserver
  python3-pyside6-location
  python3-pyside6-multimedia
  python3-pyside6-network
@@ -52,6 +58,7 @@ subpackages="
  python3-pyside6-scxml
  python3-pyside6-sensors
  python3-pyside6-serialport
+ python3-pyside6-serialbus
  python3-pyside6-speech
  python3-pyside6-sql
  python3-pyside6-svg
@@ -69,7 +76,7 @@ case "$XBPS_TARGET_MACHINE" in
 	*) build_options_default="pdf" ;;
 esac
 
-export LLVM_INSTALL_DIR=${XBPS_CROSS_BASE}/usr
+export LLVM_INSTALL_DIR=${XBPS_CROSS_BASE}/usr/lib/llvm/${_llvm}
 export PYTHONPATH=$PYTHONPATH:${XBPS_BUILDDIR}/${pkgname}-${version}/build/sources
 
 CXXFLAGS="-D_LARGEFILE64_SOURCE"
@@ -77,13 +84,14 @@ CXXFLAGS="-D_LARGEFILE64_SOURCE"
 if [ "$XBPS_WORDSIZE$XBPS_WORDSIZE" = "64$XBPS_TARGET_WORDSIZE" ]; then
 	build_options_default+=" webengine"
 fi
+case "$XBPS_TARGET_MACHINE" in
+	x86_64*|aarch64*)
+		makedepends+=" libomp${_llvm}-devel"
+		;;
+esac
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" libglvnd-devel libshiboken6-devel shiboken6"
-
-	case "$XBPS_TARGET_MACHINE" in
-		x86_64*|aarch64*) makedepends+=" libomp-devel" ;;
-	esac
 
 	configure_args+="
 	 -DQFP_PYTHON_HOST_PATH=/usr/bin/python3
@@ -100,6 +108,12 @@ if [ "$build_option_webengine" ]; then
 	subpackages+=" python3-pyside6-webview"
 fi
 
+if [ "$CROSS_BUILD" ]; then
+	configure_args+=" -DSHIBOKEN_ARCH=$XBPS_CROSS_RUST_TARGET"
+	# configure_args+=" -DSHIBOKEN_BUILD_TOOLS=ON"
+	configure_args+=" -DSYSROOT_INCLUDE_DIRS=$XBPS_CROSS_BASE/usr/include"
+fi
+
 post_patch() {
 	if [ "$CROSS_BUILD" ]; then
 		# fix pkg-config file on cross
@@ -108,7 +122,8 @@ post_patch() {
 	fi
 }
 
-post_install() {
+do_install() {
+	DESTDIR=${DESTDIR} cmake -P ${wrksrc}/build/cmake_install.cmake
 	# remove extraneous scripts/files
 	find "$DESTDIR"/usr/bin -not -name shiboken6 -type f -delete
 }
@@ -127,6 +142,7 @@ libpyside6-devel_package() {
 	pkg_install() {
 		vmove "usr/lib/cmake/PySide*"
 		vmove "usr/lib/libpyside*.so"
+		vmove "usr/lib/libpyside*.a"
 		vmove usr/lib/qt6
 		vmove usr/include/PySide6
 		vmove usr/lib/pkgconfig/pyside6.pc
@@ -236,6 +252,13 @@ python3-pyside6-designer_package() {
 		vmove "${py3_sitelib}/PySide6/QtDesigner.*"
 	}
 }
+python3-pyside6-graphs_package() {
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - Graphs"
+	pkg_install() {
+		vmove "${py3_sitelib}/PySide6/QtGraphs*"
+	}
+}
 python3-pyside6-gui_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - GUI"
@@ -249,6 +272,13 @@ python3-pyside6-help_package() {
 	short_desc+=" - Help"
 	pkg_install() {
 		vmove "${py3_sitelib}/PySide6/QtHelp.*"
+	}
+}
+python3-pyside6-httpserver_package() {
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - HTTP Server"
+	pkg_install() {
+		vmove "${py3_sitelib}/PySide6/QtHttpServer.*"
 	}
 }
 python3-pyside6-location_package() {
@@ -335,6 +365,13 @@ python3-pyside6-serialport_package() {
 	short_desc+=" - SerialPort"
 	pkg_install() {
 		vmove "${py3_sitelib}/PySide6/QtSerialPort.*"
+	}
+}
+python3-pyside6-serialbus_package() {
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - Serial Bus"
+	pkg_install() {
+		vmove "${py3_sitelib}/PySide6/QtSerialBus.*"
 	}
 }
 python3-pyside6-speech_package() {
