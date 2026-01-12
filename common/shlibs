@@ -72,7 +72,7 @@ libgo.so.23 libgo-14.1.0_1
 libgccjit.so.0 libgccjit-10.2.1pre1_1
 libgphobos.so.5 libgphobos-14.2.1_1
 libgdruntime.so.5 libgdruntime-14.2.1_1
-libperl.so.5.40 perl-5.40.1_1
+libperl.so.5.42 perl-5.42.0_1
 libgmp.so.10 gmp-5.0.1_1
 libgmpxx.so.4 gmpxx-6.0.0_2
 libmpfi.so.0 mpfi-1.5.3_1
@@ -4221,7 +4221,7 @@ libqrtr-glib.so.0 libqrtr-glib-1.0.0_1
 libbraiding.so.0 libbraiding-1.1_1
 libstemmer.so.2 libstemmer-2.1.0_1
 libdecor-0.so.0 libdecor-0.1.0_1
-libprimecount.so.7 primecount-7.2_1
+libprimecount.so.8 primecount-8.0_1
 libprimesieve.so.12 primesieve-12.0_1
 libavif.so.16 libavif-1.0.1_1
 libkdumpfile.so.12 libkdumpfile-0.5.5_1
@@ -4250,7 +4250,7 @@ libptytty.so.0 libptytty-2.0_1
 libcoeurl.so.0.3 coeurl-0.3.0_1
 libphonenumber.so.9 libphonenumber-9.0.13_1
 libgeocoding.so.9 libphonenumber-9.0.13_1
-
+libyuv.so.1922 libyuv-0.0.1922.20251020_1
 libcodec2.so.1.0 codec2-1.0.1_1
 libx86emu.so.3 libx86emu-3.4_1
 libdeflate.so.0 libdeflate-1.8_1
@@ -4550,3 +4550,4 @@ libcmark-gfm.so.0 cmark-gfm-0.29.0.gfm.13_1
 libcmark-gfm-extensions.so.0 cmark-gfm-0.29.0.gfm.13_1
 libpisp.so.1 libpisp-1.3.0_1
 libMpvQt.so.2 mpvqt-1.1.1_1
+libtomlplusplus.so.3 tomlplusplus-3.4.0_1
