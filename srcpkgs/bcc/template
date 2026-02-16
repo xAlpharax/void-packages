@@ -1,6 +1,6 @@
 # Template file for 'bcc'
 pkgname=bcc
-version=0.36.0
+version=0.36.1
 revision=1
 _llvmver=21
 build_style=cmake
@@ -15,7 +15,7 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Apache-2.0"
 homepage="https://github.com/iovisor/bcc"
 distfiles="https://github.com/iovisor/bcc/releases/download/v${version}/bcc-src-with-submodule-${version}.tar.gz>bcc-${version}.tar.gz"
-checksum=d39e23a72bb30167286553c7daefb39c5d8a43c401b53524aba42477ce4c63ca
+checksum=a83b14c09f2be115af322324ce5ccbadc83144cd67368aa7931d87e850b6660c
 python_version="3"
 
 post_extract() {
