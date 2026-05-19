@@ -1,0 +1,18 @@
+# Template file for 'SubTUI'
+pkgname=SubTUI
+version=2.14.2
+revision=1
+build_style=go
+go_import_path=github.com/MattiaPun/SubTUI/v2
+hostmakedepends="go"
+depends="mpv"
+short_desc="Lightweight Subsonic TUI music player with scrobbling support"
+maintainer="Soulful Sailer <soulful.sailer@entropic.pro>"
+license="MIT"
+homepage="https://github.com/MattiaPun/SubTUI"
+distfiles="https://github.com/MattiaPun/SubTUI/archive/refs/tags/v${version}.tar.gz"
+checksum=a483060c8288d7a2641962572ff47598d1f0417f90c5c6e5c491f660299793a3
+
+post_install() {
+	vlicense LICENSE
+}
