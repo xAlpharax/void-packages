@@ -1,6 +1,6 @@
 # Template file for 'mise'
 pkgname=mise
-version=2026.5.3
+version=2026.6.0
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -13,11 +13,27 @@ license="MIT"
 homepage="https://github.com/jdx/mise"
 changelog="https://github.com/jdx/mise/releases"
 distfiles="https://github.com/jdx/mise/archive/v${version}.tar.gz>${pkgname}-${version}.tar.gz"
-checksum=a40b3ecc7f3b92de703f016ade49f250fb9a280d48a0aae0bfab608bb0c48b98
+checksum=e85144f94a49b9e01af3e90f0f3bec4648531ef501703841fb618fecda8d705c
 
 case "$XBPS_TARGET_MACHINE" in
 	i686*) broken="runs out of memory" ;;
 esac
+
+pre_build() {
+	# workaround the cc-rs mixing CFLAGS for host and target.
+	# https://github.com/rust-lang/cc-rs/issues/1469
+	export CFLAGS_${RUST_BUILD//-/_}="${CFLAGS_host}" \
+		   CXXFLAGS_${RUST_BUILD//-/_}="${CXXFLAGS_host}" \
+		   LDFLAGS_${RUST_BUILD//-/_}="${LDFLAGS_host}" \
+		   CFLAGS_${RUST_TARGET//-/_}="${CFLAGS}" \
+		   CXXFLAGS_${RUST_TARGET//-/_}="${CXXFLAGS}" \
+		   LDFLAGS_${RUST_TARGET//-/_}="${LDFLAGS}" \
+		   CFLAGS="" CXXFLAGS="" LDFLAGS=""
+}
+
+pre_install() {
+	pre_build
+}
 
 post_install() {
 	vlicense LICENSE
